@@ -1,0 +1,147 @@
+// Variáveis de cores
+$verde: #00ff99;
+$preto: #0a0a0a;
+$branco: #ffffff;
+
+// Estilos gerais
+body {
+    background-color: $preto;
+    color: $branco;
+}
+
+// Navbar
+.navbar {
+    background-color: darken($preto, 5%);
+    padding: 1rem 0;
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .nav-link {
+        color: $branco;
+        margin: 0 10px;
+
+        &:hover {
+            color: $verde;
+        }
+    }
+
+    .buttons {
+        .btn {
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .btn-green {
+            background-color: $verde;
+            color: $preto;
+
+            &:hover {
+                background-color: lighten($verde, 10%);
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    padding: 60px 0;
+    text-align: left;
+
+    .hero-text {
+        .highlight {
+            display: block;
+            background-color: rgba($verde, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: $verde;
+            font-size: 14px;
+            width: fit-content;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+
+            .green {
+                color: $verde;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: lighten($branco, 20%);
+        }
+
+        .btn-green {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    }
+
+    .stats {
+        display: flex;
+        margin-top: 30px;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        div {
+            background: rgba($verde, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 120px;
+            flex: 1;
+
+            strong {
+                font-size: 20px;
+                color: $verde;
+                display: block;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Imagem e blocos dinâmicos
+    .hero-image {
+        position: relative;
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+        }
+
+        .info-box {
+            position: absolute;
+            background: rgba($verde, 0.2);
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: $verde;
+            font-weight: bold;
+        }
+
+        .payout {
+            top: 10%;
+            left: 60%;
+        }
+
+        .suporte {
+            top: 20%;
+            right: 10%;
+        }
+
+        .deposito {
+            bottom: 10%;
+            left: 30%;
+        }
+    }
+}
