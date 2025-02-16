@@ -11,8 +11,11 @@ body {
 
 // Navbar
 .navbar {
-    background-color: darken($preto, 5%);
+    // background-color: darken($preto, 5%);
+    backdrop-filter: blur(5px);
     padding: 1rem 0;
+    position: absolute;
+    width: 100%;
 
     .navbar-brand img {
         height: 40px;
@@ -46,8 +49,21 @@ body {
 
 // Hero Section
 .hero {
-    padding: 60px 0;
-    text-align: left;
+    background: url('./img/bgHero.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    align-content: center;
+
+    
+
+    // padding: 60px 0;
+    // text-align: left;
+
+    @media screen and (max-width:500px) {
+        padding-top: 120px;
+    }
 
     .hero-text {
         .highlight {
