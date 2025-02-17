@@ -171,4 +171,103 @@ body {
   left: 30%;
 }
 
+.carousel-section {
+  text-align: center;
+  padding: 60px 0;
+}
+.carousel-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.carousel-section h2 .green {
+  color: #04f480;
+}
+.carousel-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.carousel-section .swiper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 0;
+  background-image: radial-gradient(circle closest-side, rgba(4, 244, 128, 0.3019607843), rgba(255, 255, 255, 0));
+}
+.carousel-section .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-section .swiper-slide img {
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-section .custom-prev,
+.carousel-section .custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+.carousel-section .custom-prev {
+  left: -0.5rem;
+}
+.carousel-section .custom-next {
+  right: -0.5rem;
+}
+.carousel-section .custom-prev::after,
+.carousel-section .custom-next::after {
+  font-size: 20px;
+  color: #04f480;
+}
+.carousel-section .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.carousel-section .swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+}
+.carousel-section .swiper-pagination-bullet-active .progress {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: #00ff99;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.carousel-section .btn-green {
+  background: #04f480;
+  color: #0a0a0a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.carousel-section .btn-green:hover {
+  background: #2ffc99;
+}
+
 /*# sourceMappingURL=styles.css.map */

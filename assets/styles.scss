@@ -215,3 +215,141 @@ body {
 
 
 }
+
+// Estilizando a seção do carousel
+.carousel-section {
+    text-align: center;
+    padding: 60px 0;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+
+        .green {
+            color: $verde;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .swiper {
+        width: 100%;
+        // max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 0;
+        background-image: radial-gradient(circle closest-side, #04f4804d, #fff0);
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            // border-radius: 10px;
+            // box-shadow: 0 0 15px rgba($verde, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    // Efeito de destaque no slide central
+    .swiper-slide-active img {
+        // transform: scale(1.2);
+    }
+
+    // Botões de navegação personalizados
+    .custom-prev,
+    .custom-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        // width: 50px;
+        // height: 50px;
+        // background: $verde;
+        // border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 10;
+    }
+
+    .custom-prev {
+        left: -.5rem;
+    }
+
+    .custom-next {
+        right: -.5rem;
+        // background: $branco;
+        // border: 2px solid $verde;
+    }
+
+    .custom-prev::after,
+    .custom-next::after {
+        font-size: 20px;
+        color: $verde;
+    }
+
+    // Estiliza os bullets da paginação
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 40px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.2); // Fundo neutro
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    // Barrinha de progresso ativa
+    .swiper-pagination-bullet-active .progress {
+        display: block;
+        width: 0%;
+        height: 100%;
+        background: #00ff99; // Cor da barra ativa
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    // Animação do preenchimento
+    @keyframes progressFill {
+        from {
+            width: 0%;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+
+
+    // Botão CTA
+    .btn-green {
+        background: $verde;
+        color: $preto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        display: inline-block;
+
+        &:hover {
+            background: lighten($verde, 10%);
+        }
+    }
+}
