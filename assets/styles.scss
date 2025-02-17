@@ -341,15 +341,18 @@ body {
 
     // Botão CTA
     .btn-green {
-        background: $verde;
-        color: $preto;
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-top: 20px;
-        display: inline-block;
+        background-image: linear-gradient(148deg, $verde 59%, #a8ff6b);
+        padding: 15px 30px 18px;
+        font-size: 18px;
+        line-height: 18px;
+        // border: 1px #845bf6;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-top: 1.2rem;
 
         &:hover {
             background: lighten($verde, 10%);
         }
     }
+
 }

@@ -259,12 +259,13 @@ body {
   }
 }
 .carousel-section .btn-green {
-  background: #04f480;
-  color: #0a0a0a;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 20px;
-  display: inline-block;
+  background-image: linear-gradient(148deg, #04f480 59%, #a8ff6b);
+  padding: 15px 30px 18px;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 1.2rem;
 }
 .carousel-section .btn-green:hover {
   background: #2ffc99;
