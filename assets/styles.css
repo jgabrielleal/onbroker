@@ -294,6 +294,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
+  height: auto;
 }
 .avaliacoes-section .avaliacao-card {
   background: #1b1b1b;
@@ -305,6 +306,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 .avaliacoes-section .avaliacao-card img {
   width: 50px;

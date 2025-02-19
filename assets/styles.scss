@@ -378,6 +378,7 @@ body {
         justify-content: center;
         align-items: center;
         transition: transform 0.3s ease-in-out;
+        height: auto;
     }
 
     .avaliacao-card {
@@ -393,6 +394,7 @@ body {
         flex-direction: column;
         // gap: 10px;
         position: relative;
+        height: 100%;
     }
 
     .avaliacao-card img {
