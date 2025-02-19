@@ -483,3 +483,112 @@ body {
 
 
 }
+
+.benefits {
+    text-align: center;
+    padding: 60px 20px;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        span {
+            color: #00ff99;
+        }
+    }
+
+    .benefits-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background: linear-gradient(145deg, #0f6b3e, #075d2b);
+        padding: 8px;
+        border-radius: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .benefit-card {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .benefit-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+
+            .benefit-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: #00ff99;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: #000;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #fff;
+                line-height: 1.4;
+
+                span {
+                    color: #00ff99;
+                }
+            }
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+    }
+
+    .btn-green {
+        background-image: linear-gradient(148deg, #00ff99 59%, #a8ff6b);
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-top: 20px;
+        cursor: pointer;
+        border: none;
+        color: #000;
+        transition: 0.3s;
+
+        &:hover {
+            background: lighten(#00ff99, 10%);
+        }
+    }
+}
