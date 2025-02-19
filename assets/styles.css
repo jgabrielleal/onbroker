@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #0a0a0a;
   color: #ffffff;
@@ -269,6 +270,111 @@ body {
 }
 .carousel-section .btn-green:hover {
   background: #2ffc99;
+}
+
+.avaliacoes-section {
+  text-align: left;
+  padding: 30px 0;
+  background-color: #121212;
+  /* Alinhando setas e paginação na mesma linha */
+}
+.avaliacoes-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.avaliacoes-section .swiper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+.avaliacoes-section .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.avaliacoes-section .avaliacao-card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  border: 1px solid #04f480;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.avaliacoes-section .avaliacao-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  object-fit: cover;
+  position: absolute;
+  top: 15%;
+  left: 10px;
+}
+.avaliacoes-section .avaliacao-card h4 {
+  font-size: 1rem;
+  color: #00ff99;
+  margin-left: 65px;
+}
+.avaliacoes-section .avaliacao-card span {
+  font-size: 0.8rem;
+  color: #ccc;
+  display: block;
+  margin-left: 65px;
+}
+.avaliacoes-section .estrelas {
+  color: #04f480;
+  font-size: 0.9rem;
+  margin-left: 65px;
+}
+.avaliacoes-section .avaliacao-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+.avaliacoes-section .swiper-navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* Espaço entre os elementos */
+  margin-top: 3rem;
+}
+.avaliacoes-section .swiper-button-prev,
+.avaliacoes-section .swiper-button-next {
+  color: #00ff99 !important;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0;
+  transform: none;
+  /* Remove transformações desnecessárias */
+}
+.avaliacoes-section .swiper-button-prev::after,
+.avaliacoes-section .swiper-button-next::after {
+  font-size: 2em !important;
+}
+.avaliacoes-section .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content !important;
+}
+.avaliacoes-section .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: 0.3s;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+}
+.avaliacoes-section .swiper-pagination-bullet-active {
+  background: #00ff99;
 }
 
 /*# sourceMappingURL=styles.css.map */
