@@ -1,10 +1,11 @@
 $(document).ready(function () {
-    var swiper = new Swiper(".mySwiper", {
+    // Swiper para os prêmios
+    var swiperPremios = new Swiper(".mySwiper", {
         loop: true,
         spaceBetween: 20,
         centeredSlides: true,
         autoplay: {
-            delay: 3000, // Tempo total da animação (3 segundos)
+            delay: 3000,
             disableOnInteraction: false,
         },
         navigation: {
@@ -19,12 +20,8 @@ $(document).ready(function () {
             },
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1, // Mobile: 1 slide visível
-            },
-            1024: {
-                slidesPerView: 3, // Desktop: 3 slides visíveis
-            }
+            0: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 }
         },
         on: {
             init: function () {
@@ -47,7 +44,8 @@ $(document).ready(function () {
         }
     });
 
-    var swiper = new Swiper(".mySwiperavaliacao", {
+    // Swiper para as avaliações
+    var swiperAvaliacao = new Swiper(".mySwiperavaliacao", {
         loop: true,
         spaceBetween: 20,
         centeredSlides: true,
@@ -64,15 +62,78 @@ $(document).ready(function () {
             clickable: true,
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            }
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
         }
     });
+
+    // Swiper para os ativos financeiros
+    var swiperAtivos = new Swiper(".mySwiperAtivos", {
+        loop: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        speed: 9000, // Movimento contínuo mais suave
+        slidesPerView: "auto", // Permite ajuste dinâmico
+        autoplay: {
+            delay: 0, // Sem pausa
+            disableOnInteraction: false,
+        },
+        allowTouchMove: false, // Impede arrastar manualmente
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+
+    // **Reduzir a velocidade ao passar o mouse**
+    $(".mySwiperAtivos").on("mouseenter", function () {
+        swiperAtivos.autoplay.stop();
+        swiperAtivos.params.speed = 15000; // Mais lento
+        swiperAtivos.autoplay.start();
+    });
+
+    // **Voltar ao normal ao tirar o mouse**
+    $(".mySwiperAtivos").on("mouseleave", function () {
+        swiperAtivos.autoplay.stop();
+        swiperAtivos.params.speed = 9000; // Rápido novamente
+        swiperAtivos.autoplay.start();
+    });
+
+    // Criar os gráficos do TradingView
+    function createTradingViewWidget(containerId, symbol) {
+        let widgetContainer = document.getElementById(containerId);
+
+        if (widgetContainer) {
+            let script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
+            script.async = true;
+            script.innerHTML = JSON.stringify({
+                "symbol": symbol,
+                "width": "100%",
+                "height": "250",
+                "locale": "br",
+                "dateRange": "12M",
+                "colorTheme": "dark",
+                "trendLineColor": "#37a6ef",
+                "underLineColor": "#00ff99",
+                "isTransparent": true
+            });
+
+            widgetContainer.appendChild(script);
+        }
+    }
+
+    // Adicionar os gráficos aos cards
+    createTradingViewWidget("meta", "NASDAQ:META");
+    createTradingViewWidget("tesla", "NASDAQ:TSLA");
+    createTradingViewWidget("apple", "NASDAQ:AAPL");
+    createTradingViewWidget("amazon", "NASDAQ:AMZN");
+    createTradingViewWidget("microsoft", "NASDAQ:MSFT");
+    createTradingViewWidget("bitcoin", "BINANCE:BTCUSDT");
+    createTradingViewWidget("ethereum", "BINANCE:ETHUSDT");
+    // createTradingViewWidget("bnb", "BINANCE:BNBUSDT");
+    // createTradingViewWidget("solana", "BINANCE:SOLUSDT");
 });

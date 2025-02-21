@@ -396,12 +396,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  background: linear-gradient(145deg, #0f6b3e, #075d2b);
+  background-image: linear-gradient(148deg, #0f8b50, #0a5531);
   padding: 8px;
   border-radius: 20px;
   max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
 }
 @media (max-width: 1024px) {
   .benefits .benefits-container {
@@ -419,8 +418,7 @@ body {
   }
 }
 .benefits .benefit-card {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 10px;
   border-radius: 12px;
   text-align: left;
   display: flex;
@@ -430,7 +428,6 @@ body {
 }
 .benefits .benefit-card:hover {
   transform: translateY(-5px);
-  background: rgba(0, 0, 0, 0.3);
 }
 .benefits .benefit-card .benefit-header {
   display: flex;
@@ -477,6 +474,61 @@ body {
 }
 .benefits .btn-green:hover {
   background: #33ffad;
+}
+
+.carousel-ativos {
+  padding: 60px 0px;
+}
+.carousel-ativos .tag {
+  border: 1px solid #04f480;
+  color: #04f480;
+  background-color: rgba(4, 244, 128, 0.2);
+  border-radius: 50px;
+  padding: 2.5px 7.5px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.carousel-ativos h2 .green {
+  color: #04f480;
+}
+.carousel-ativos .swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+.carousel-ativos .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.carousel-ativos .ativos-card {
+  background: rgba(0, 255, 153, 0.1);
+  border: 2px solid #04f480;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  touch-action: none !important;
+}
+.carousel-ativos .ativos-card h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  position: relative;
+  margin: 10px 0 0;
+}
+.carousel-ativos .ativos-card .tradingview-widget {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
