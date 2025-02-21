@@ -594,7 +594,9 @@ body {
 }
 
 .carousel-ativos {
-    // text-align: center;
+    background-color: #131313;
+    border-top: 1px solid #04f4801a;
+    border-bottom: 1px solid #04f4801a;
     padding: 60px 0px;
 
     .tag {
