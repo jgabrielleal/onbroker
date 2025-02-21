@@ -134,6 +134,11 @@ $(document).ready(function () {
     createTradingViewWidget("microsoft", "NASDAQ:MSFT");
     createTradingViewWidget("bitcoin", "BINANCE:BTCUSDT");
     createTradingViewWidget("ethereum", "BINANCE:ETHUSDT");
-    // createTradingViewWidget("bnb", "BINANCE:BNBUSDT");
-    // createTradingViewWidget("solana", "BINANCE:SOLUSDT");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".ativos-card, .tradingview-widget-container").forEach((el) => {
+            el.style.pointerEvents = "none"; // Impede interação em todos os elementos
+        });
+    });
+
 });

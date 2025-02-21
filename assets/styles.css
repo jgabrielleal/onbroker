@@ -482,6 +482,12 @@ body {
   border-bottom: 1px solid rgba(4, 244, 128, 0.1019607843);
   padding: 60px 0px;
 }
+.carousel-ativos .ativos-card {
+  pointer-events: none;
+}
+.carousel-ativos .tradingview-widget-container {
+  pointer-events: none;
+}
 .carousel-ativos .tag {
   border: 1px solid #04f480;
   color: #04f480;

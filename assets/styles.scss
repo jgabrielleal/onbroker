@@ -599,6 +599,14 @@ body {
     border-bottom: 1px solid #04f4801a;
     padding: 60px 0px;
 
+    .ativos-card {
+        pointer-events: none; // Impede cliques em todo o card
+    }
+
+    .tradingview-widget-container {
+        pointer-events: none; // Bloqueia interações com o gráfico do TradingView
+    }
+
     .tag {
         border: 1px solid $verde;
         color: $verde;
