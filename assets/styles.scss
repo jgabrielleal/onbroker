@@ -668,3 +668,122 @@ body {
         }
     }
 }
+
+// Seção Como Começar
+.como-comecar {
+    text-align: center;
+    padding: 60px 20px;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        span {
+            color: $verde;
+        }
+    }
+
+    .steps-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .step-card {
+        background-image: linear-gradient(156deg, #04f48029 2% 26%, #04f48000);
+        border: 1px solid $verde;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: left;
+        width: 30%;
+        min-width: 280px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+
+        .step-icon {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: $verde;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            box-shadow: 0 0 10px rgba($verde, 0.4);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            line-height: 1.4;
+            margin-top: 20px;
+
+            span {
+                color: $verde;
+            }
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #d0d0d0;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+    }
+
+    .cta-button {
+        margin-top: 30px;
+        background-image: linear-gradient(148deg, #00ff99 59%, #a8ff6b);
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        color: #000;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover {
+            background: lighten(#00ff99, 10%);
+        }
+
+        i {
+            margin-left: 10px;
+        }
+    }
+}
