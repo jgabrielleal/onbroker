@@ -902,3 +902,74 @@ body {
         }
     }
 }
+
+.faq {
+    text-align: center;
+    padding: 60px 20px;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        .green {
+            color: #00ff99;
+        }
+    }
+
+    .faq-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            border-color: #00ff99;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px;
+            transition: 0.3s;
+
+            .icon {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #00ff99;
+                margin-right: .5rem;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #ccc;
+            padding: 0 10px;
+            text-align: left;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        &.active {
+            .faq-question .icon {
+                transform: rotate(45deg); // Animação do ícone "+" para "-"
+            }
+
+            .faq-answer {
+                max-height: 200px; // Ajustável para expandir a resposta
+                padding: 10px;
+            }
+        }
+    }
+}
