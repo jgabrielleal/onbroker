@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background-color: #0a0a0a;
+  background-color: #000;
   color: #ffffff;
 }
 
@@ -28,7 +28,7 @@ body {
   background-image: linear-gradient(129deg, #04f480 53%, #a8ff6b);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  color: #0a0a0a;
+  color: #000;
   border-radius: 10px;
   padding: 10px 20px 8px;
   font-size: 14px;
@@ -644,6 +644,100 @@ body {
 }
 .como-comecar .cta-button i {
   margin-left: 10px;
+}
+
+.hero-negociacao {
+  position: relative;
+  text-align: center;
+  padding: 80px 0;
+}
+.hero-negociacao .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.hero-negociacao .hero-image {
+  margin-bottom: 20px;
+  background-image: linear-gradient(0deg, #000, rgba(0, 0, 0, 0) 55%, #000), url("./img/bg-hero-negociacao.jpg");
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
+  padding: 6rem 0;
+}
+.hero-negociacao .hero-image img {
+  width: 100%;
+  max-width: 50rem;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 153, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+.hero-negociacao .hero-content {
+  max-width: 700px;
+  color: #ffffff;
+  text-align: center;
+}
+.hero-negociacao .hero-content .tag {
+  display: inline-block;
+  background-color: rgba(4, 244, 128, 0.2);
+  padding: 5px 15px;
+  border-radius: 50px;
+  color: #04f480;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #04f480;
+}
+.hero-negociacao .hero-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.hero-negociacao .hero-content h2 .green {
+  color: #04f480;
+}
+.hero-negociacao .hero-content p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.hero-negociacao .hero-content .btn-green {
+  background-image: linear-gradient(148deg, #04f480 59%, #a8ff6b);
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #000;
+  text-decoration: none;
+}
+.hero-negociacao .hero-content .btn-green:hover {
+  background: #2ffc99;
+  color: #000;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .hero-negociacao .hero-content h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .hero-negociacao .hero-content h2 {
+    font-size: 1.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
