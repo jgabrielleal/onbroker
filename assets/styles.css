@@ -818,6 +818,7 @@ body {
 }
 .faq .faq-item .faq-question {
   text-align: left;
+  display: flex;
   align-items: center;
   font-size: 1.1rem;
   color: #fff;
