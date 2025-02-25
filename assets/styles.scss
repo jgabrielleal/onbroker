@@ -161,8 +161,8 @@ body {
             grid-row-gap: 16px;
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
-            background-image: linear-gradient(320deg, rgba(4, 244, 128, 0.368627451), rgba(255, 255, 255, 0));
-            border: 1px solid #04f480;
+            background-image: linear-gradient(320deg, #ffcc005e, #fff0);
+            border: 1px solid $amarelo;
             border-radius: 20px;
             justify-content: center;
             align-items: center;
@@ -205,41 +205,83 @@ body {
     // Imagem e blocos dinâmicos
     .hero-image {
         position: relative;
+        display: flex;
 
         img {
             width: 100%;
             max-width: 500px;
             display: block;
             margin: auto;
+
+            // Animação de flutuação para a imagem principal
+            animation: flutuacao 4s ease-in-out infinite;
+            z-index: 1;
         }
 
         .info-box {
             position: absolute;
-            background: rgba($amarelo, 0.2);
+            background-image: $btn-gradient;
             padding: 8px 12px;
             border-radius: 5px;
             font-size: 14px;
-            color: $amarelo;
+            color: $preto;
+            border: #000 solid 1px;
             font-weight: bold;
-        }
+            text-align: center;
 
-        .payout {
-            top: 10%;
-            left: 60%;
-        }
 
-        .suporte {
-            top: 20%;
-            right: 10%;
-        }
+            // Aplicando flutuação nos elementos com tempos diferentes
+            &.payout {
+                left: 25%;
+                top: 30%;
+                animation: flutuacao-info 3.5s ease-in-out infinite alternate;
+                z-index: 2;
 
-        .deposito {
-            bottom: 10%;
-            left: 30%;
+            }
+
+            &.suporte {
+                top: 20%;
+                right: -2%;
+                animation: flutuacao-info 4s ease-in-out infinite alternate-reverse;
+            }
+
+            &.deposito {
+                bottom: 30%;
+                left: 80%;
+                animation: flutuacao-info 3s ease-in-out infinite alternate;
+            }
         }
     }
 
+    // Keyframes para a animação da imagem principal
+    @keyframes flutuacao {
+        0% {
+            transform: translateY(0);
+        }
 
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    // Keyframes para os info-boxes (com variações de tempo)
+    @keyframes flutuacao-info {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-6px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
 }
 
 // Estilizando a seção do carousel
@@ -1000,6 +1042,72 @@ body {
                 max-height: 200px; // Ajustável para expandir a resposta
                 padding: 10px;
             }
+        }
+    }
+}
+
+.footer {
+    background-color: #000;
+    padding: 40px 0;
+    color: #fff;
+    text-align: left;
+
+    .logo-footer img {
+        max-width: 150px;
+        filter: brightness(1.2);
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $amarelo;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 8px;
+
+            a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $amarelo;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 20px 0;
+    }
+
+    .text-center {
+        text-align: center;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+
+        .row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-md-2,
+        .col-md-4 {
+            margin-bottom: 20px;
         }
     }
 }
