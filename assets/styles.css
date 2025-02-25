@@ -786,7 +786,7 @@ body {
   border-color: #ffcc00;
 }
 .faq .faq-item .faq-question {
-  display: flex;
+  text-align: left;
   align-items: center;
   font-size: 1.1rem;
   color: #fff;
