@@ -20,13 +20,18 @@ body {
   padding: 1rem 0;
   position: absolute;
   width: 100%;
+  z-index: 9999;
 }
 .navbar .navbar-brand img {
-  height: 40px;
+  height: 4rem;
+}
+.navbar .navbar-toggler {
+  color: #ffffff;
 }
 .navbar .nav-link {
   color: #ffffff;
   margin: 0 10px;
+  font-size: 12px;
 }
 .navbar .nav-link:hover {
   color: #ffcc00;
@@ -41,8 +46,8 @@ body {
   backdrop-filter: blur(5px);
   color: #000;
   border-radius: 10px;
-  padding: 10px 20px 8px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 20px;
   transition: all 0.4s ease-in-out;
@@ -51,6 +56,7 @@ body {
   animation: relampago 0.15s linear infinite;
 }
 .navbar .buttons .btn-outline-light {
+  font-size: 12px;
   border-color: #ffcc00 !important;
 }
 
@@ -61,6 +67,9 @@ body {
   background-position-x: center;
   background-position-y: bottom;
   align-content: center;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 500px) {
   .hero {

@@ -160,3 +160,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+$('.navbar-toggler').on('click', function () {
+
+    if ($('.navbar-collapse').hasClass('show')) {
+        $('.navbar').css({
+            'background-color': 'transparent'
+        });
+    } else {
+        $('.navbar').css({
+            'background-color': 'rgba(3, 3, 3, 0.8)'
+        });
+    }
+});
+
